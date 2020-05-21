@@ -2,12 +2,13 @@
 Workshop 1 part 1
 Module: N/A
 Filename: w1p1.cpp
-Version 0.9
+Version 0.91
 Author	Fardad Soleimanloo
 Revision History
 -----------------------------------------------------------
 Date       Reason
 2020/5/18  Preliminary release
+2020/5/20  fixed last line double read in linux
 -----------------------------------------------------------*/
 #include <iostream>
 #include <iomanip>
@@ -154,8 +155,7 @@ void wordStats() {
    int maxLen = 0;
    int foundIndex = 0;
    int wordCount = 0;
-   while (!cin.fail()) {
-      cin >> word;
+   while (cin >> word) {
       trim(word);
       toLowerCaseAndCopy(lowerCaseWord, word);
       if (lowerCaseWord[0] != 0) {
@@ -178,7 +178,7 @@ void wordStats() {
          }
       }
    }
-   cout << "---------------------------------------------------" << endl << 
+   cout << "---------------------------------------------------" << endl <<
            "Read " << wordCount << " words!" << endl << 
            "---------------------------------------------------" << endl;
    sort(words, NoOfWords, 1);
