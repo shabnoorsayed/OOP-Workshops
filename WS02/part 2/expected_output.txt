@@ -27,7 +27,7 @@ Layers at minimum must be 1, try again.
 Enter the number of wrapping layers for the Gift: 0
 Layers at minimum must be 1, try again.
 Enter the number of wrapping layers for the Gift: 3
-Enter wrapping pattern #1: Sop  pots
+Enter wrapping pattern #1: Spots
 Enter wrapping pattern #2: Stripes
 Enter wrapping pattern #3: Zigzags
 Test succeeded!
