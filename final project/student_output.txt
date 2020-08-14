@@ -1,0 +1,45 @@
+Script started on Sun 09 Aug 2020 03:32:11 PM EDT
+==78540== Memcheck, a memory error detector
+==78540== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==78540== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==78540== Command: ms
+==78540== 
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Pass 1: ------->
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stoi
+==78540== 
+==78540== Process terminating with default action of signal 6 (SIGABRT)
+==78540==    at 0x568C387: raise (in /usr/lib64/libc-2.17.so)
+==78540==    by 0x568DA77: abort (in /usr/lib64/libc-2.17.so)
+==78540==    by 0x4E977D4: __gnu_cxx::__verbose_terminate_handler() (in /usr/lib64/libstdc++.so.6.0.19)
+==78540==    by 0x4E95745: ??? (in /usr/lib64/libstdc++.so.6.0.19)
+==78540==    by 0x4E95772: std::terminate() (in /usr/lib64/libstdc++.so.6.0.19)
+==78540==    by 0x4E95992: __cxa_throw (in /usr/lib64/libstdc++.so.6.0.19)
+==78540==    by 0x4EEA6F6: std::__throw_invalid_argument(char const*) (in /usr/lib64/libstdc++.so.6.0.19)
+==78540==    by 0x4055C0: int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) (in /home/ssayed10/M6OOP/ms)
+==78540==    by 0x405569: std::stoi(std::string const&, unsigned long*, int) (in /home/ssayed10/M6OOP/ms)
+==78540==    by 0x404F91: sdds::Vehicle::read(std::istream&) (in /home/ssayed10/M6OOP/ms)
+==78540==    by 0x401DCA: sdds::Car::read(std::istream&) (in /home/ssayed10/M6OOP/ms)
+==78540==    by 0x404564: sdds::Parking::loadDataFile() (in /home/ssayed10/M6OOP/ms)
+==78540== 
+==78540== HEAP SUMMARY:
+==78540==     in use at exit: 8,989 bytes in 6 blocks
+==78540==   total heap usage: 7 allocs, 1 frees, 9,021 bytes allocated
+==78540== 
+==78540== LEAK SUMMARY:
+==78540==    definitely lost: 0 bytes in 0 blocks
+==78540==    indirectly lost: 0 bytes in 0 blocks
+==78540==      possibly lost: 144 bytes in 1 blocks
+==78540==    still reachable: 8,845 bytes in 5 blocks
+==78540==                       of which reachable via heuristic:
+==78540==                         stdstring          : 29 bytes in 1 blocks
+==78540==         suppressed: 0 bytes in 0 blocks
+==78540== Rerun with --leak-check=full to see details of leaked memory
+==78540== 
+==78540== For lists of detected and suppressed errors, rerun with: -s
+==78540== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Script done on Sun 09 Aug 2020 03:32:12 PM EDT
